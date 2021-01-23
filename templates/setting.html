@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body style="background: white;">
+  <div class="row">
+    <div class="container pt-3 pb-3" style="background-color: #7DB249;">
+      <div class="row justify-content-md-center">
+        <div class="col-2">
+
+        </div>
+        <div class="col-8">
+          <div>
+            <h1 style="text-align: center;">리필러블 스테이션</h1>
+          </div>
+        </div>
+        <div class="col-2"> 
+          <a href="setting.html">
+            <img width="50px" src="img/gear-fill.svg"/>
+          </a> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="padding:0px 10px 0px 10px;">
+    <div class="col-8" style="padding:0;">
+      <div class="border" style="padding: 10px; margin: 10px;">
+
+        <h4 style="display: flex; justify-content: center; align-items: center;">
+          리필러블 스테이션에 오신 것을 환영합니다!
+        </h4>
+        <form class="border">
+          <div class="container" style="padding:10px ">
+            <div class="row">
+              <div class="col-9">
+                <div class="container" style="padding-right: 0px; padding-left:0;">
+                  <div class="row">
+                    <div class="col-4">
+                      <label for="exampleInputEmail1" style="display: flex; justify-content: center; align-items: center;" >
+                        <b>핸드폰번호</b>
+                      </label>
+                    </div>
+                    <div class="col-8">
+                      <input id="phoneNum" type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onclick="phoneNumSelect()" maxlength="11">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <label for="exampleInputPassword1" style="display: flex; justify-content: center; align-items: center;" >
+                        <b>비밀번호</b>
+                      </label>
+                    </div>
+                    <div class="col-8">
+                      <input id="password" type="password" class="form-control" id="exampleInputPassword1" onclick="passwordSelect()" maxlength="8">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3" style="display: flex; justify-content: center; align-items: center; padding:0px;">
+                <div>
+                  <button type="submit" class="btn btn-success btn-lg">로그인</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div class="container">
+          <div class="pt-2 pb-2" style="display: flex; justify-content: center; align-items: center;">
+            <button type="button" class="btn btn-success btn-lg">"리필러"로 함께하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4" style="padding:0;">
+      <div style="margin: 10px 10px 10px 0px;">
+        <div class="container" style="padding: 0;">
+          <div class="row-new">
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(1)">
+                1
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(2)">
+                2
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(3)">
+                3
+              </button>
+            </div>
+          </div>
+          <div class="row-new">
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(4)">
+                4
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(5)"> 
+                5
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(6)">
+                6
+              </button>
+            </div>
+          </div>
+          <div class="row-new">
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(7)">
+                7
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(8)">
+                8
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(9)">
+                9
+              </button>
+            </div>
+          </div>
+          <div class="row-new">
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="differentSelect()">
+                다음
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(0)">
+                0
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClickDelete()">
+                삭제
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <div>
+
+  
+
+
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- We are using node <script>document.write(process.versions.node)</script> -->
+  <script src="bootstrap.js"></script>
+  <script src="numpad.js"></script>
+</body>
+</html>
