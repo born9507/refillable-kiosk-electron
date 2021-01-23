@@ -1,14 +1,15 @@
 const { app, BrowserWindow } = require('electron');
 
 function createWindow () {
+    var isPi = require('detect-rpi');
     const win = new BrowserWindow({
         width: 800,
         height: 480,
         webPreferences: {
             nodeIntegration: true
         },
-        // kiosk: true,
-        // frame: false
+        kiosk: isPi,
+        frame: !(isPi)
     })
     win.loadFile('templates/index.html')
 }
