@@ -8,8 +8,8 @@ function createWindow () {
         webPreferences: {
             nodeIntegration: true
         },
-        kiosk: isPi,
-        frame: !(isPi)
+        kiosk: isPi(),
+        frame: !(isPi())
     })
     win.loadFile('templates/index.html')
 }
