@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body style="background: white;">
+  <div class="row">
+    <div class="container pt-3 pb-3" style="background-color: #7DB249;">
+      <div class="row justify-content-md-center">
+        <div class="col-2">
+          <a class="d-flex justify-content-center" href="signup1.html">
+            <img width="50px" src="img/arrow-left.svg">
+          </a>
+        </div>
+        <div class="col-8">
+          <div>
+            <h1 style="text-align: center;">리필러블 스테이션</h1>
+          </div>
+        </div>
+        <div class="col-2"> 
+          <div class="d-flex justify-content-center" href="">
+            <img width="50px" src="img/gear-fill.svg"/>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="padding:0px 10px 0px 10px;">
+    <div class="col-8" style="padding:0;">
+      <div class="border" style="padding: 10px 10px 0px 10px; margin: 10px 10px 0px 10px;">
+
+        <!-- <div style="display: flex; justify-content: center; align-items: center;">
+          <b>"리필러"로 함께하기</b>
+        </div> -->
+        <form>
+          <div class="border">
+            <div class="container" style="padding:10px ">
+              <div class="row">
+                <div class="col-12">
+                  <div class="container" style="padding-right: 0px; padding-left:0;">
+                    <div class="row mb-1">
+                      <div class="col-3" style="display: flex; justify-content: center; align-items: center;">
+                        <label for="phoneNum" style="display: flex; justify-content: center; align-items: center;" >
+                          <b>핸드폰번호</b>
+                        </label>
+                      </div>
+                      <div class="col-5">
+                        <input id="phoneNum" type="tel" class="form-control" aria-describedby="emailHelp" onclick="phoneNumSelect()" maxlength="11">
+                      </div>
+                      <div class="col-4">
+                        <span id="phoneNumHelpInline" class="form-text">
+                          
+                        </span>
+                      </div>
+                    </div>
+                    <div class="row mb-1">
+                      <div class="col-3" style="padding:0; display: flex; justify-content: center; align-items: center;">
+                        <label for="password1" style="display: flex; justify-content: center; align-items: center;" >
+                          <b>비밀번호 (4자리)</b>
+                        </label>
+                      </div>
+                      <div class="col-5">
+                        <input id="password1" type="password" class="form-control" onclick="password1Select()" maxlength="4">
+                      </div>
+                      <div class="col-4">
+                        <span id="password1HelpInline" class="form-text">
+                          
+                        </span>
+                      </div>
+                    </div>
+                    <div class="row mb-1">
+                      <div class="col-3" style="display: flex; justify-content: center; align-items: center;">
+                        <label for="password2" style="display: flex; justify-content: center; align-items: center;" >
+                          <b>비밀번호 확인</b>
+                        </label>
+                      </div>
+                      <div class="col-5">
+                        <input id="password2" type="password" class="form-control" onclick="password2Select()" maxlength="4">
+                      </div>
+                      <div class="col-4">
+                        <span id="password2HelpInline" class="form-text">
+                          
+                        </span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-3" style="display: flex; justify-content: center; align-items: center;">
+                        <label for="certificate" style="display: flex; justify-content: center; align-items: center;" >
+                          <b>채널 인증 번호</b>
+                        </label>
+                      </div>
+                      <div class="col-5">
+                        <input id="certificate" type="tel" class="form-control" onclick="certificateSelect()" maxlength="4">
+                      </div>
+                      <div class="col-4">
+                        <span id="certificateHelpInline" class="form-text">
+                          
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-3" style="display: flex; justify-content: center; align-items: center; padding:0px;">
+                  <div>
+                    <button type="submit" class="btn btn-success btn-lg">회원가입</button>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="container" style="display:flex; justify-content: center; padding: 0px">
+            <b>인증번호는 카카오톡 채널 @리필러블 추가 시 확인하실 수 있습니다!</b>
+          </div>
+          <div class="container">
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#modalOne">리필러블 이용약관</button>
+              <div style="width: 10px;"></div>
+              <button type="button" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#modalTwo">개인정보 수집 및 동의 이용약관</button>
+            </div>
+            <div class="d-flex justify-content-center">
+              회원가입 버튼 클릭시 위 두 약관에 동의한 것으로 간주됩니다.
+            </div>
+            <div class="pt-2 pb-2" style="display: flex; justify-content: center; align-items: center;">
+              <button type="button" class="btn btn-success btn-lg" onclick="signup()">회원가입</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-4" style="padding:0;">
+      <div style="margin: 10px 10px 10px 0px;">
+        <div class="container" style="padding: 0;">
+          <div class="row-new">
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(1)">
+                1
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(2)">
+                2
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(3)">
+                3
+              </button>
+            </div>
+          </div>
+          <div class="row-new">
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(4)">
+                4
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(5)"> 
+                5
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(6)">
+                6
+              </button>
+            </div>
+          </div>
+          <div class="row-new">
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(7)">
+                7
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(8)">
+                8
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(9)">
+                9
+              </button>
+            </div>
+          </div>
+          <div class="row-new">
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="nextSelect()">
+                다음
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClick(0)">
+                0
+              </button>
+            </div>
+            <div class="col">
+              <button type="button" class="btn btn-secondary btn-lg btn-full" onclick="buttonClickDelete()">
+                삭제
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <div>
+
+  
+
+
+
+    <!-- Modal -->
+  <div class="modal fade" id="modalOne" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">리필러블 이용약관</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">닫기</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalTwo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">개인정보 수집 및 동의 이용약관</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">닫기</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- We are using node <script>document.write(process.versions.node)</script> -->
+  <script src="js/bootstrap.js"></script>
+  <script src="js/numpad.js"></script>
+  <script src="js/authenticate.js"></script>
+</body>
+</html>
